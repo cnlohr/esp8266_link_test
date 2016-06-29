@@ -1,2 +1,6 @@
-# esp8266_link_test
-Test link between an ESP8266 and a base station or another ESP8266 easily.
+#ESP8266/ESP8285 Range Test Tool
+
+Simply say make server_burn or make client_burn.
+
+This will make a client or a server ESP.  The SSID is "rangetest" password is "soldering."
+
