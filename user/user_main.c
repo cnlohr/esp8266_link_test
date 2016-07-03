@@ -170,8 +170,8 @@ void user_init(void)
 
 	struct softap_config sap;
 	wifi_softap_get_config_default( &sap );
-	os_strcpy(&sap.ssid, "rangetestX" ); //Not sure why the 'X' is needed.
-	sap.ssid_len = 10;
+	os_strcpy(&sap.ssid, "rangetest" ); //Not sure why the 'Y' is needed.
+	sap.ssid_len = 9;
 	os_strcpy(&sap.password, "soldering" );
     sap.authmode = AUTH_WPA2_PSK;
 	wifi_softap_set_config_current( &sap );

@@ -69,7 +69,7 @@ $(CLIENT_FW_FILES): client.elf
 	@echo "FW $@"
 	PATH=$(FOLDERPREFIX):$$PATH;$(ESPTOOL_PY) elf2image client.elf
 
-burn_server : $(CLIENT_FW_FILES)
+burn_server : $(SERVER_FW_FILES)
 	stty -F $(PORT) 115200 -echo raw
 	sleep .1
 	($(ESPTOOL_PY) --port $(PORT) write_flash -fs 8m -fm dout 0x00000 server.elf-0x00000.bin 0x40000 server.elf-0x40000.bin)||(true)
@@ -81,6 +81,6 @@ burn_client : $(CLIENT_FW_FILES)
 	($(ESPTOOL_PY) --port $(PORT) write_flash -fs 8m -fm dout 0x00000 client.elf-0x00000.bin 0x40000 client.elf-0x40000.bin)||(true)
 
 clean :
-	rm -rf user/*.o driver/*.o $(TARGET_OUT) $(FW_FILE_1) $(FW_FILE_2)
+	rm -rf user/*.o driver/*.o $(TARGET_OUT) $(FW_FILE_1) $(FW_FILE_2) $(SERVER_FW_FILES) $(CLIENT_FW_FILES)
 
 
