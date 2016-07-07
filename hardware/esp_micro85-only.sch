@@ -32,11 +32,11 @@ LIBS:valves
 LIBS:esp_micro85-only-cache
 EELAYER 27 0
 EELAYER END
-$Descr A4 11693 8268
+$Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "6 jul 2016"
+Date "7 jul 2016"
 Rev ""
 Comp ""
 Comment1 ""
@@ -293,12 +293,12 @@ $EndComp
 $Comp
 L +5V #PWR22
 U 1 1 576C1E4F
-P 1250 4550
-F 0 "#PWR22" H 1250 4640 20  0001 C CNN
-F 1 "+5V" H 1250 4640 30  0000 C CNN
-F 2 "" H 1250 4550 60  0000 C CNN
-F 3 "" H 1250 4550 60  0000 C CNN
-	1    1250 4550
+P 1250 4500
+F 0 "#PWR22" H 1250 4590 20  0001 C CNN
+F 1 "+5V" H 1250 4590 30  0000 C CNN
+F 2 "" H 1250 4500 60  0000 C CNN
+F 3 "" H 1250 4500 60  0000 C CNN
+	1    1250 4500
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -313,17 +313,6 @@ F 3 "" H 3150 3700 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR27
-U 1 1 576C2480
-P 1350 5300
-F 0 "#PWR27" H 1350 5300 30  0001 C CNN
-F 1 "GND" H 1350 5230 30  0001 C CNN
-F 2 "" H 1350 5300 60  0000 C CNN
-F 3 "" H 1350 5300 60  0000 C CNN
-	1    1350 5300
-	0    1    1    0   
-$EndComp
-$Comp
 L +3.3V #PWR21
 U 1 1 576C24D2
 P 2800 4100
@@ -333,17 +322,6 @@ F 2 "" H 2800 4100 60  0000 C CNN
 F 3 "" H 2800 4100 60  0000 C CNN
 	1    2800 4100
 	0    -1   -1   0   
-$EndComp
-$Comp
-L +2.5V #PWR26
-U 1 1 576C24F3
-P 2550 5200
-F 0 "#PWR26" H 2550 5150 20  0001 C CNN
-F 1 "+2.5V" H 2550 5300 30  0000 C CNN
-F 2 "" H 2550 5200 60  0000 C CNN
-F 3 "" H 2550 5200 60  0000 C CNN
-	1    2550 5200
-	0    1    1    0   
 $EndComp
 $Comp
 L CONN_1 P2
@@ -657,8 +635,6 @@ Wire Wire Line
 Wire Wire Line
 	1350 4550 1250 4550
 Wire Wire Line
-	1250 4550 1250 5400
-Wire Wire Line
 	1250 4750 1350 4750
 Wire Wire Line
 	3150 3700 3150 3600
@@ -666,12 +642,7 @@ Wire Wire Line
 	3300 4100 3400 4100
 Wire Wire Line
 	3350 4100 3350 3600
-Wire Wire Line
-	1250 5200 1350 5200
 Connection ~ 1250 4750
-Wire Wire Line
-	1250 5400 1350 5400
-Connection ~ 1250 5200
 Connection ~ 3350 4100
 Wire Wire Line
 	3450 1550 3450 2000
@@ -685,10 +656,14 @@ Connection ~ 2650 1200
 Wire Wire Line
 	1750 2950 1950 2950
 Wire Wire Line
-	1150 5000 1250 5000
-Connection ~ 1250 5000
+	1250 5000 1150 5000
 Wire Wire Line
 	3050 3700 3050 3600
 Wire Wire Line
 	2750 3600 1900 3600
+Text Notes 2650 5250 0    60   ~ 0
+Use 1292-1002-1-ND antenna or 1292-1000-1-ND
+Wire Wire Line
+	1250 4500 1250 5000
+Connection ~ 1250 4550
 $EndSCHEMATC
