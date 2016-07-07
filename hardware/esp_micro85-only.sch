@@ -662,7 +662,7 @@ Wire Wire Line
 Wire Wire Line
 	2750 3600 1900 3600
 Text Notes 2650 5250 0    60   ~ 0
-Use 1292-1002-1-ND antenna or 1292-1000-1-ND
+Use 1292-1002-1-ND antenna or 1292-1000-1-ND or 1292-1035-1-ND 
 Wire Wire Line
 	1250 4500 1250 5000
 Connection ~ 1250 4550
